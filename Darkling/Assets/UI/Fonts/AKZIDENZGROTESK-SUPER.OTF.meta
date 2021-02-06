@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: ca40a232dd9be4f40992bd9dfa1e0ce0
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Akzidenz-Grotesk BQ Super
+  fontNames:
+  - Akzidenz-Grotesk BQ Super
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 570c2837a4d0d734db0d24d90486f81b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
