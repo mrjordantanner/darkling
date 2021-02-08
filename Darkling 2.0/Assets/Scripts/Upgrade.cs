@@ -8,6 +8,7 @@ public class Upgrade : MonoBehaviour
     // Describes each upgrade, its cost, what it does
     // Sits on the button object 
 
+    public UpgradeController.UpgradeItem upgradeItem;
     public UpgradeTier upgradeTier;
     public string upgradeName;
     public string description;

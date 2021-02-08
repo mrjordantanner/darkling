@@ -172,8 +172,7 @@ public class Stats : MonoBehaviour
             hasShot1 =
             hasShot2 = true;
             cheated = true;
-
-            UpgradeController.Instance.GrantDemonGlove();
+            hasDemonGlove = true;
         }
 
         pickupTimer += Time.deltaTime;

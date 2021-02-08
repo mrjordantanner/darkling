@@ -218,11 +218,11 @@ public class GameManager : MonoBehaviour
 
         HUD.Instance.activeUserText.text = UserController.Instance.activeUser.userData.userName;
 
-        Restart();
+        Restart(0);
 
     }
     
-    public void Restart()
+    public void Restart(int wave)
     {
         // Destroy all enemies and enemy projectiles
         var allEnemies = FindObjectsOfType<EnemyCharacter>();
@@ -281,7 +281,9 @@ public class GameManager : MonoBehaviour
         waveBlink.blink = false;
         killsBlink.blink = false;
 
-        if (!debugMode)
+        if (debugMode)
+            WaveController.Instance.SetupNextWave(wave);
+        else
             WaveController.Instance.SetupNextWave();
     }
 
@@ -329,11 +331,124 @@ public class GameManager : MonoBehaviour
             AudioManager.Instance.RestoreMusicVolume();
         }
 
-        if (Input.GetKeyDown(KeyCode.R) && !gamePaused && canPause && !enteringText)
-        {
-            Restart();
+        //*********************
+        // DEVELOPER HOTKEYS
+        // Use AlphaNumeric keys to restart level at a particular wave difficulty
+        if (Input.GetKeyDown(KeyCode.Alpha1) && !gamePaused && canPause && !enteringText) {
+            Restart(1);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha2) && !gamePaused && canPause && !enteringText) {
+            Restart(2);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha3) && !gamePaused && canPause && !enteringText) {
+            Restart(3);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha4) && !gamePaused && canPause && !enteringText) {
+            Restart(4);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha5) && !gamePaused && canPause && !enteringText) {
+            Restart(5);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha6) && !gamePaused && canPause && !enteringText) {
+            Restart(6);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha7) && !gamePaused && canPause && !enteringText) {
+            Restart(7);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha8) && !gamePaused && canPause && !enteringText) {
+            Restart(8);
+        }
+        if (Input.GetKeyDown(KeyCode.Alpha9) && !gamePaused && canPause && !enteringText) {
+            Restart(9);
         }
 
+        // Use Numpad keys to grant upgrades
+        if (Input.GetKeyDown(KeyCode.Keypad1) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank) {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.Shot1) {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad2) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank)
+            {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.Shot2)
+                {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad3) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank)
+            {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.Health1)
+                {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad4) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank) {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.Health2) {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad5) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank)
+            {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.Speed1)
+                {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad6) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank)
+            {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.Jump1)
+                {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad7) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank)
+            {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.DoubleGrenades)
+                {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad8) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank)
+            {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.Regen1)
+                {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.Keypad9) && !gamePaused && canPause && !enteringText)
+        {
+            foreach (var upgrade in UpgradeController.Instance.upgradeBank)
+            {
+                if (upgrade.upgradeItem == UpgradeController.UpgradeItem.DemonGlove)
+                {
+                    UpgradeController.Instance.GrantUpgradeEffects(upgrade);
+                }
+            }
+        }
 
     }
 

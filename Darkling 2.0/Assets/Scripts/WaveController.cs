@@ -106,15 +106,28 @@ public class WaveController : MonoBehaviour
     }
 
 
+    public void SetupNextWave(int debugWave)
+    {
+       // if (debugWave != undefined)
+            currentWave = debugWave - 1;
+     //   else
+     //       currentWave++;
+
+        SetupNextWave();
+    }
+
     public void SetupNextWave()
     {
+
+        currentWave++;
+
         //TODO: GameManager.Instance.mainLight.color = etc etc
         // and/or
         // GameManager.Instance.postColorGrading.temperature = Mathf.Random(0,100);
 
         SpawnerController.Instance.currentMaxEnemies = CalculateMaxEnemies();
 
-        currentWave++;   // currentWave starts at 0, so this will be 1 the first time
+
         //SpawnerController.Instance.firstSpawnThisWave = true;
         currentWaveDuration = CalculateWaveDuration();
         currentWaveTimer = currentWaveDuration;

@@ -25,6 +25,8 @@ public class UpgradeController : MonoBehaviour
 
     #endregion
 
+    public UpgradeItem upgradeItem;
+    public enum UpgradeItem { Shot1, Shot2, Health1, Health2, Speed1, Jump1, Regen1, Regen2, Shield1, Shield2, DoubleGrenades, DemonGlove }
     public UpgradeTier currentTier;
     public Text maxHPText;
     public CanvasGroup upgradeMenuCanvasGroup;
@@ -160,33 +162,59 @@ public class UpgradeController : MonoBehaviour
         return currentTier;
     }
 
-
+   
     public void GrantUpgradeEffects(Upgrade upgrade)
     {
-        if (upgrade.upgradeName == "Shot1") Stats.Instance.hasShot1 = true;
-        if (upgrade.upgradeName == "Shot2") Stats.Instance.hasShot2 = true;
+        //if (upgrade.upgradeName == "Shot1") Stats.Instance.hasShot1 = true;
+        //if (upgrade.upgradeName == "Shot2") Stats.Instance.hasShot2 = true;
 
-        if (upgrade.upgradeName == "Health1") Stats.Instance.hasHealth1 = true;
-        if (upgrade.upgradeName == "Health2") Stats.Instance.hasHealth2 = true;
+        //if (upgrade.upgradeName == "Health1") Stats.Instance.hasHealth1 = true;
+        //if (upgrade.upgradeName == "Health2") Stats.Instance.hasHealth2 = true;
 
-        if (upgrade.upgradeName == "Speed1") Stats.Instance.hasSpeed1 = true;
-        if (upgrade.upgradeName == "Speed2") Stats.Instance.hasSpeed1 = true;
+        //if (upgrade.upgradeName == "Speed1") Stats.Instance.hasSpeed1 = true;
+        //// if (upgrade.upgradeName == "Speed2") Stats.Instance.hasSpeed1 = true;
 
-        if (upgrade.upgradeName == "Jump1")  Stats.Instance.hasJump1 = true;
-        if (upgrade.upgradeName == "Jump2") Stats.Instance.hasJump1 = true;
+        //if (upgrade.upgradeName == "Jump1")  Stats.Instance.hasJump1 = true;
+        //// if (upgrade.upgradeName == "Jump2") Stats.Instance.hasJump1 = true;
 
-        if (upgrade.upgradeName == "Regen1") Stats.Instance.hasRegen1 = true;
-        if (upgrade.upgradeName == "Regen2") Stats.Instance.hasRegen2 = true;
+        //if (upgrade.upgradeName == "Regen1") Stats.Instance.hasRegen1 = true;
+        //if (upgrade.upgradeName == "Regen2") Stats.Instance.hasRegen2 = true;
 
-        if (upgrade.upgradeName == "Shield1") Stats.Instance.hasShield1 = true;
-        if (upgrade.upgradeName == "Shield2") Stats.Instance.hasShield2 = true;
+        //if (upgrade.upgradeName == "Shield1") Stats.Instance.hasShield1 = true;
+        //if (upgrade.upgradeName == "Shield2") Stats.Instance.hasShield2 = true;
 
-        if (upgrade.upgradeName == "DoubleGrenades") Stats.Instance.hasDoubleGrenades = true;
-        if (upgrade.upgradeName == "DemonGlove")
-        {
-            GrantDemonGlove();
+        //if (upgrade.upgradeName == "DoubleGrenades") Stats.Instance.hasDoubleGrenades = true;
+        //if (upgrade.upgradeName == "DemonGlove")
+        //{
+        //    GrantDemonGlove();
 
+        //}
+
+        if (upgrade.upgradeItem == UpgradeItem.Shot1) Stats.Instance.hasShot1 = true;
+        if (upgrade.upgradeItem == UpgradeItem.Shot2) Stats.Instance.hasShot2 = true;
+
+        if (upgrade.upgradeItem == UpgradeItem.Health1) Stats.Instance.hasHealth1 = true;
+        if (upgrade.upgradeItem == UpgradeItem.Health2) Stats.Instance.hasHealth2 = true;
+
+        if (upgrade.upgradeItem == UpgradeItem.Speed1) Stats.Instance.hasSpeed1 = true;
+        // if (upgrade.upgradeName == "Speed2") Stats.Instance.hasSpeed1 = true;
+
+        if (upgrade.upgradeItem == UpgradeItem.Jump1) Stats.Instance.hasJump1 = true;
+        // if (upgrade.upgradeName == "Jump2") Stats.Instance.hasJump1 = true;
+
+        if (upgrade.upgradeItem == UpgradeItem.Regen1) Stats.Instance.hasRegen1 = true;
+        if (upgrade.upgradeItem == UpgradeItem.Regen2) Stats.Instance.hasRegen2 = true;
+
+        if (upgrade.upgradeItem == UpgradeItem.Shield1) Stats.Instance.hasShield1 = true;
+        if (upgrade.upgradeItem == UpgradeItem.Shield2) Stats.Instance.hasShield2 = true;
+
+        if (upgrade.upgradeItem == UpgradeItem.DoubleGrenades) Stats.Instance.hasDoubleGrenades = true;
+        if (upgrade.upgradeItem == UpgradeItem.DemonGlove) {
+            Stats.Instance.hasDemonGlove = true;
+            player.spriteRenderer.color = demonGloveColor;
+            player.ghostTrails.on = true;
         }
+
 
         //if (upgrade.upgradeName == "TripleShot")
         //{
@@ -206,15 +234,5 @@ public class UpgradeController : MonoBehaviour
 
     public Color demonGloveColor;
 
-    public void GrantDemonGlove()
-    {
-        Stats.Instance.hasDemonGlove = true;
-        // TODO:  Adjust gauntlet appearance
-
-        player.spriteRenderer.color = demonGloveColor;
-        player.ghostTrails.on = true;
-        
-
-    }
 
 }
