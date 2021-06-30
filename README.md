@@ -1,5 +1,10 @@
-![Darkling-Header-1.png](///raw/7cb/81/z/24ced.png)
+# DARKLING
+## Darkling is a first-person-shooter game developed using the Unity Engine and programmed in C# for Ludum Dare 44.  It features user-login, an online leaderboard, an upgrade system, and definitley plenty of action.
 
+## [Play the game](https://jordantanner.itch.io/darkling)
+## [Ludum Dare ratings](https://ldjam.com/events/ludum-dare/44/darkling)
+
+# Story
 ### Is this reality?
 
 You "wake" to find yourself in an eerie landscape.  Strange voices fill the air, and the 
@@ -12,15 +17,10 @@ Peering off into the distance, you can vaguely make out hordes of ghastly shapes
  
 ------------------
 
-![GIF-4.gif](///raw/7cb/81/z/24738.gif)
-
-![GIF-5.gif](///raw/7cb/81/z/2473a.gif)
-
-
  
 --------------------
  
-### How to Play
+## How to Play
 - Survive waves of enemies that grow more challenging each time
 - You may choose to upgrade between waves at the cost of your MAX LIFE
 - Collect GREEN ORBS to gain LIFE
@@ -28,7 +28,7 @@ Peering off into the distance, you can vaguely make out hordes of ghastly shapes
 - Collect YELLOW ORBS for a temporary speed boost
 - Collect BLUE ORBS to become temporarily invulnerable
 
-### Controls
+## Controls
 - WASD - Move
 - Mouse - Look / Aim
 - Hold LMB - Rapid Fire Explosive Beam (unlimited ammo)
@@ -37,7 +37,7 @@ Peering off into the distance, you can vaguely make out hordes of ghastly shapes
 - Spacebar - Jump
 - Z - Zoom
 
-### Hints
+## Hints
 - Keep moving!
 - All Orbs expire 30 seconds after they drop
 - Upgrading between waves is optional, not required
@@ -45,16 +45,9 @@ Peering off into the distance, you can vaguely make out hordes of ghastly shapes
 - Enemy projectiles can be destroyed
 - There is a cheat code that grants max upgrades...
 
-### Thanks for playing and rating!
+--------------------------
 
----------------------------
-
-### Me playing "Darkling:"
-https://youtu.be/r-zM7qe_qko
-
----------------------------
-
-### Check out streamers playing "Darkling"
+## Check out streamers playing "Darkling"
 
 [Playdungeonmans](https://www.twitch.tv/videos/421001904?t=02h17m43s)
 
@@ -62,8 +55,8 @@ https://youtu.be/r-zM7qe_qko
 
 --------------------------
 
-### Credits: 
-- Jordan Tanner:  Graphics, Programming, Design, Sound
-- Please drop me a line at jordan@jordantanner.net
+## Credits: 
+- Jordan T. Smith:  Graphics, Programming, Design, Sound
 
-(ROBO font by George Edward Purdy)
+
+
