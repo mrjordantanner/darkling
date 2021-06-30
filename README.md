@@ -1,8 +1,9 @@
 # DARKLING
-## Darkling is a first-person-shooter game developed using the Unity Engine and programmed in C# for Ludum Dare 44.  It features user-login, an online leaderboard, an upgrade system, and definitley plenty of action.
-
-## [Play the game](https://jordantanner.itch.io/darkling)
-## [Ludum Dare ratings](https://ldjam.com/events/ludum-dare/44/darkling)
+### Darkling is a first-person-shooter game developed using the Unity Engine and programmed in C# for Ludum Dare 44. 
+#### It features user-login, an online leaderboard, an upgrade system, powerups, and of course explosions.
+## [Play the game in your browser here!](https://jordantanner.itch.io/darkling)
+--------------------
+![GIF-1](https://user-images.githubusercontent.com/50030252/123884581-2d24f400-d911-11eb-80b1-aa782607e894.gif)
 
 # Story
 ### Is this reality?
@@ -14,11 +15,9 @@ Suddenly, your right arm is filled with a fiery pain.  Looking down in horror, y
 instead replaced by some terrible demonic entity.  You can feel its evil power surging through you, burning like hellfire.  
 
 Peering off into the distance, you can vaguely make out hordes of ghastly shapes rapidly approaching, while the infernal pain in your arm feels like it's about to explode... 
- 
-------------------
-
- 
+  
 --------------------
+![GIF-2](https://user-images.githubusercontent.com/50030252/123884612-429a1e00-d911-11eb-9ee0-7797e7cb6a6b.gif)
  
 ## How to Play
 - Survive waves of enemies that grow more challenging each time
@@ -54,6 +53,7 @@ Peering off into the distance, you can vaguely make out hordes of ghastly shapes
 [Ursagames](https://www.twitch.tv/videos/420044893?t=04h52m23s)
 
 --------------------------
+## [Check out the Ludum Dare ratings](https://ldjam.com/events/ludum-dare/44/darkling)
 
 ## Credits: 
 - Jordan T. Smith:  Graphics, Programming, Design, Sound
